@@ -16,6 +16,8 @@ async function upsert(table, data) {
     }
 
     db[table].push(data);
+    console.log('data', data);
+    return data;
 }
 
 async function query(tabla, q) {
