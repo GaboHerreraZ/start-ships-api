@@ -12,7 +12,7 @@ router.post('/', (req, res) => {
             response.success(res, userData, 200);
         })
         .catch( error => {
-            response.error(res, e.message, 500);
+            response.error(res, error.message, 500);
         })
 });
 

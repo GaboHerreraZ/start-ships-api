@@ -4,7 +4,7 @@ const cors = require('cors');
 
 //Controllers
 const user = require('../components/user/network');
-
+const auth = require('../components/auth/network');
 
 
 
@@ -15,6 +15,8 @@ app.use(express.urlencoded({ extended: true}));
 
 //Router
 app.use('/api/user', user);
+app.use('/api/auth', auth);
+
 
 
 app.listen(config.api.port, () => {
